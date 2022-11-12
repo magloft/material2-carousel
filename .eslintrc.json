@@ -1,0 +1,32 @@
+{
+  "extends": ["plugin:@angular-eslint/recommended"],
+  "rules": {
+    "max-len": ["error", 250],
+    "no-console": ["error", { "allow": ["error", "info"] }],
+    "no-restricted-syntax": "off",
+    "@angular-eslint/directive-selector": ["error", { "type": "attribute", "prefix": "mat", "style": "camelCase" }],
+    "@angular-eslint/component-selector": ["error", { "type": "element", "prefix": ["mat", "app"], "style": "kebab-case" }],
+    "@angular-eslint/component-class-suffix": ["error", { "suffixes": ["Component", "Page"] }],
+    "@angular-eslint/no-output-native": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/semi": ["error", "never"]
+  },
+  "overrides": [{
+    "files": ["projects/carousel/src/public_api.ts", "projects/carousel/src/lib/**/*.ts", "projects/carousel/src/lib/**/*.d.ts"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": "./projects/carousel/tsconfig.lib.json", "ecmaVersion": 2020, "sourceType": "module" }
+  }, {
+    "files": ["projects/carousel/src/test.ts", "projects/carousel/src/**/*.spec.ts"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": "./projects/carousel/tsconfig.spec.json", "ecmaVersion": 2020, "sourceType": "module" }
+  }, {
+    "files": ["projects/demo/src/**/*.ts", "projects/demo/src/**/*.d.ts"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": { "project": "./projects/demo/tsconfig.app.json", "ecmaVersion": 2020, "sourceType": "module" },
+    "plugins": ["@angular-eslint/template"],
+    "processor": "@angular-eslint/template/extract-inline-html"
+  }, {
+    "files": ["projects/demo/src/**/*.component.html"],
+    "extends": ["plugin:@angular-eslint/template/recommended"]
+  }]
+}

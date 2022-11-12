@@ -1,13 +1,36 @@
 {
+  "npm.packageManager": "yarn",
+  "eslint.packageManager": "yarn",
+  "eslint.options": {
+    "extensions": [".ts", ".html"]
+  },
+  "editor.rulers": [160],
+  "html.format.enable": false,
+  "html.format.wrapLineLength": 160,
+  "html.format.extraLiners": "",
+  "html.format.indentInnerHtml": true,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.trimAutoWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true,
+    "**/.git": true,
     ".angular": true,
-    "node_modules": true,
-    "dist": true
-  }
+    "docs": true,
+    "dist": true,
+    "node_modules": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "json.format.enable": false,
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove"
 }

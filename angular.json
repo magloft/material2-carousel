@@ -8,18 +8,10 @@
       "sourceRoot": "projects/carousel/src",
       "projectType": "library",
       "prefix": "mat",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/carousel/tsconfig.lib.json",
-            "project": "projects/carousel/ng-package.json"
-          }
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "tsConfig": "projects/carousel/tsconfig.lib.json", "project": "projects/carousel/ng-package.json" }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -28,22 +20,15 @@
             "tsConfig": "projects/carousel/tsconfig.spec.json",
             "karmaConfig": "projects/carousel/karma.conf.js",
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "projects/carousel/src/styles"
-              ]
+              "includePaths": ["projects/carousel/src/styles"]
             }
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/carousel/tsconfig.lib.json",
-              "projects/carousel/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "eslintConfig": ".eslintrc.json",
+            "lintFilePatterns": ["**/*.spec.ts", "**/*.ts"]
           }
         }
       }
@@ -53,11 +38,6 @@
       "sourceRoot": "projects/demo/src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "scss"
-        }
-      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -81,36 +61,29 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/demo/src/environments/environment.ts",
-                  "with": "projects/demo/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "projects/demo/src/environments/environment.ts",
+                "with": "projects/demo/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                }
-              ]
+              "budgets": [{
+                "type": "initial",
+                "maximumWarning": "2mb",
+                "maximumError": "5mb"
+              }]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "demo:build"
-          },
+          "options": { "browserTarget": "demo:build" },
           "configurations": {
             "production": {
               "browserTarget": "demo:build:production"
@@ -119,9 +92,7 @@
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "demo:build"
-          }
+          "options": { "browserTarget": "demo:build" }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -141,22 +112,16 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/demo/tsconfig.app.json",
-              "projects/demo/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "eslintConfig": ".eslintrc.json",
+            "lintFilePatterns": ["**/*.spec.ts", "**/*.ts"]
           }
         }
       }
     }
   },
-  "defaultProject": "carousel",
   "cli": {
-    "analytics": "eee8f5cc-b6b7-42f8-adac-c0a89e7dee03"
+    "analytics": false
   }
 }

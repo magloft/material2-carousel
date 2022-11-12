@@ -1,4 +1,4 @@
-import { ThemePalette } from '@angular/material/core';
+import { ThemePalette } from '@angular/material/core'
 
 export interface MatCarousel {
   // Animations.
@@ -21,7 +21,7 @@ export interface MatCarousel {
   orientation: Orientation;
 }
 
-export type Orientation = 'ltr' | 'rtl';
+export type Orientation = 'ltr' | 'rtl'
 export interface SvgIconOverrides {
   arrowBack: string;
   arrowForward: string;
