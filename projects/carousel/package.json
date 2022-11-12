@@ -1,5 +1,5 @@
 {
-  "name": "@ngbmodule/material-carousel",
+  "name": "@magloft/material-carousel",
   "description": "Carousel component for Angular using Material Design.",
   "version": "0.7.1",
   "repository": {
