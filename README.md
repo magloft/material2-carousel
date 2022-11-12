@@ -5,14 +5,6 @@
 
 [![Material2 Carousel](./projects/demo/src/assets/Biglogo.png)](https://github.com/gabrielbusarello/material2-carousel)
 
-## NOTICE
-Hi guys, how are you?
-
-I'm not using Angular anymore, it means I no longer use this component, what prevents me from pushing quality commits, doing assertive code reviews and being up-to-date with new Angular releases, same as gbrlsnchs. I don't do open source for stars, I do to help people, so I don't want people that depend on this component to have a bad support.
-
-I will try to deliver some updates to Angular version, but I can't do it in proper ways, because I don't know really how things are working in newest versions and because I don't have much time to do it either. I'll check the version issues, and the PR's openeds, and after that I will archive the project. I saw this fork from gbrlsnchs former project that are updated to 14th version: https://github.com/magloft/material2-carousel.
-Sorry for the problems guys.
-
 ## About
 This package is a carousel component for Angular using Material Design.
 
