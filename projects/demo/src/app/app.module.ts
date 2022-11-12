@@ -13,7 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatTooltipModule } from '@angular/material/tooltip'
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { MatCarouselModule } from '@ngbmodule/material-carousel'
+import { MatCarouselModule } from '@magloft/material-carousel'
 
 import { AppComponent } from './app.component'
 

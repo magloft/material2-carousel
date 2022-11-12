@@ -2,7 +2,7 @@ import { OverlayContainer } from '@angular/cdk/overlay'
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core'
 import { ThemePalette } from '@angular/material/core'
 import { MatSnackBar } from '@angular/material/snack-bar'
-import { MatCarouselSlideComponent, Orientation } from '@ngbmodule/material-carousel'
+import { MatCarouselSlideComponent, Orientation } from '@magloft/material-carousel'
 
 @Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.scss'] })
 export class AppComponent {
