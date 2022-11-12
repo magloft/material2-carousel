@@ -20,13 +20,13 @@
     "parser": "@typescript-eslint/parser",
     "parserOptions": { "project": "./projects/carousel/tsconfig.spec.json", "ecmaVersion": 2020, "sourceType": "module" }
   }, {
-    "files": ["projects/demo/src/**/*.ts", "projects/demo/src/**/*.d.ts"],
+    "files": ["projects/docs/src/**/*.ts", "projects/docs/src/**/*.d.ts"],
     "parser": "@typescript-eslint/parser",
-    "parserOptions": { "project": "./projects/demo/tsconfig.app.json", "ecmaVersion": 2020, "sourceType": "module" },
+    "parserOptions": { "project": "./projects/docs/tsconfig.app.json", "ecmaVersion": 2020, "sourceType": "module" },
     "plugins": ["@angular-eslint/template"],
     "processor": "@angular-eslint/template/extract-inline-html"
   }, {
-    "files": ["projects/demo/src/**/*.component.html"],
+    "files": ["projects/docs/src/**/*.component.html"],
     "extends": ["plugin:@angular-eslint/template/recommended"]
   }]
 }

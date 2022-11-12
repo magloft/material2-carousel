@@ -1,9 +1,9 @@
 # Material Carousel
-[![Build Status](https://travis-ci.org/gabrielbusarello/material2-carousel.svg?branch=master)](https://travis-ci.org/gabrielbusarello/material2-carousel)
+[![Build Status](https://travis-ci.org/magloft/material2-carousel.svg?branch=master)](https://travis-ci.org/magloft/material2-carousel)
 [![npm version](https://badge.fury.io/js/%40ngbmodule%2Fmaterial-carousel.svg)](https://badge.fury.io/js/%40ngbmodule%2Fmaterial-carousel)
-[![Live demo](https://img.shields.io/badge/demo-blue.svg)](https://gabrielbusarello.github.io/material2-carousel/)
+[![Live demo](https://img.shields.io/badge/demo-blue.svg)](https://magloft.github.io/material2-carousel/)
 
-[![Material2 Carousel](./projects/demo/src/assets/Biglogo.png)](https://github.com/gabrielbusarello/material2-carousel)
+[![Material2 Carousel](./projects/docs/src/assets/Biglogo.png)](https://github.com/magloft/material2-carousel)
 
 ## About
 This package is a carousel component for Angular using Material Design.
@@ -74,7 +74,7 @@ If you want to have a carousel with constant height (regardless of width), you m
 
 By default, `slideHeight` is set to `100%`, which will not work if the parent element height isn't defined (i.e. relative heights do not work if the parent height is `auto`). In that case you could pass a valid css string for `slideHeight`. You can use any valid css height string like `100px` or `25vh`.
 
-Play around with the [demo](https://gabrielbusarello.github.io/material2-carousel/) to see how you can use this carousel with or without explicit parent height.
+Play around with the [docs](https://magloft.github.io/material2-carousel/) to see how you can use this carousel with or without explicit parent height.
 
 **With parent elements that have height:auto**
 * use `proportion` if you want a carousel that resizes responsively (this is the default configuration).
@@ -107,11 +107,11 @@ import { MatCarouselSlide, MatCarouselSlideComponent } from '@magloft/material-c
 
 ## Contributing
 ### How to help
-- For bugs and opinions, please [open an issue](https://github.com/gabrielbusarello/material2-carousel/issues/new)
-- For pushing changes, please [open a pull request](https://github.com/gabrielbusarello/material2-carousel/compare)
+- For bugs and opinions, please [open an issue](https://github.com/magloft/material2-carousel/issues/new)
+- For pushing changes, please [open a pull request](https://github.com/magloft/material2-carousel/compare)
 
 ### How to develop and test
 #### Testing
 `ng test carousel --watch false`
-#### Running the demo application
-`ng serve demo --source-map`
+#### Running the docs application
+`ng serve docs --source-map`

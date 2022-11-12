@@ -33,26 +33,26 @@
         }
       }
     },
-    "demo": {
-      "root": "projects/demo/",
-      "sourceRoot": "projects/demo/src",
+    "docs": {
+      "root": "projects/docs/",
+      "sourceRoot": "projects/docs/src",
       "projectType": "application",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo",
-            "index": "projects/demo/src/index.html",
-            "main": "projects/demo/src/main.ts",
-            "polyfills": "projects/demo/src/polyfills.ts",
-            "tsConfig": "projects/demo/tsconfig.app.json",
+            "outputPath": "dist/docs",
+            "index": "projects/docs/src/index.html",
+            "main": "projects/docs/src/main.ts",
+            "polyfills": "projects/docs/src/polyfills.ts",
+            "tsConfig": "projects/docs/tsconfig.app.json",
             "assets": [
-              "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
+              "projects/docs/src/favicon.ico",
+              "projects/docs/src/assets"
             ],
             "styles": [
-              "projects/demo/src/styles.scss"
+              "projects/docs/src/styles.scss"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": [
@@ -62,8 +62,8 @@
           "configurations": {
             "production": {
               "fileReplacements": [{
-                "replace": "projects/demo/src/environments/environment.ts",
-                "with": "projects/demo/src/environments/environment.prod.ts"
+                "replace": "projects/docs/src/environments/environment.ts",
+                "with": "projects/docs/src/environments/environment.prod.ts"
               }],
               "optimization": true,
               "outputHashing": "all",
@@ -83,31 +83,31 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": { "browserTarget": "demo:build" },
+          "options": { "browserTarget": "docs:build" },
           "configurations": {
             "production": {
-              "browserTarget": "demo:build:production"
+              "browserTarget": "docs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": { "browserTarget": "demo:build" }
+          "options": { "browserTarget": "docs:build" }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/demo/src/test.ts",
-            "polyfills": "projects/demo/src/polyfills.ts",
-            "tsConfig": "projects/demo/tsconfig.spec.json",
-            "karmaConfig": "projects/demo/karma.conf.js",
+            "main": "projects/docs/src/test.ts",
+            "polyfills": "projects/docs/src/polyfills.ts",
+            "tsConfig": "projects/docs/tsconfig.spec.json",
+            "karmaConfig": "projects/docs/karma.conf.js",
             "styles": [
-              "projects/demo/src/styles.scss"
+              "projects/docs/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
-              "projects/demo/src/favicon.ico",
-              "projects/demo/src/assets"
+              "projects/docs/src/favicon.ico",
+              "projects/docs/src/assets"
             ]
           }
         },
