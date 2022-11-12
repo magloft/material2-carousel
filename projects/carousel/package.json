@@ -4,12 +4,12 @@
   "version": "14.2.7",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gabrielbusarello/material2-carousel.git"
+    "url": "https://github.com/magloft/material2-carousel.git"
   },
   "author": "Gabriel Busarello <gabriel20053@gmail.com>",
   "license": "MIT",
-  "homepage": "https://gabrielbusarello.github.io/material2-carousel/",
-  "bugs": "https://github.com/gabrielbusarello/material2-carousel/issues",
+  "homepage": "https://magloft.github.io/material2-carousel/",
+  "bugs": "https://github.com/magloft/material2-carousel/issues",
   "keywords": [
     "angular",
     "material",
