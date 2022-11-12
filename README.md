@@ -5,10 +5,11 @@
 
 [![Material2 Carousel](./projects/docs/src/assets/Biglogo.png)](https://github.com/magloft/material2-carousel)
 
+## Notice
+This is a fork of [gbrlsnchs/material2-carousel](https://github.com/gbrlsnchs/material2-carousel) and has been upgraded for use with Angular 14. All credits go to [gbrlsnchs](https://github.com/gbrlsnchs) for his great work on creating this component, and I have merely updated the repository to work with Angular 14.
+
 ## About
 This package is a carousel component for Angular using Material Design.
-
-Until `v1` is reached, breaking changes may be introduced.
 
 ### Installing
 `yarn add @magloft/material-carousel`
