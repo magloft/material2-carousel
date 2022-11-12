@@ -6,7 +6,7 @@ import { MatCarouselSlideComponent, Orientation } from '@magloft/material-carous
 
 @Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls: ['./app.component.scss'] })
 export class AppComponent {
-  private static readonly INSTALL_TEXT = 'npm install @ngbmodule/material-carousel'
+  private static readonly INSTALL_TEXT = 'yarn add @magloft/material-carousel'
 
   public slidesList = new Array<never>(5)
   public showContent = false
