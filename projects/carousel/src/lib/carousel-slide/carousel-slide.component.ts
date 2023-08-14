@@ -22,8 +22,9 @@ export class MatCarouselSlideComponent
   @Input() public hideOverlay = false
   @Input() public disabled = false // implements ListKeyManagerOption
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   @ViewChild(TemplateRef) public templateRef: TemplateRef<any>
-    
+
   constructor(public sanitizer: DomSanitizer) {
   }
 

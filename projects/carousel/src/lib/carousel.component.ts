@@ -5,6 +5,7 @@ import type { ElementRef, QueryList } from '@angular/core'
 import {
   AfterContentInit,
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ContentChildren,
   EventEmitter,
@@ -140,6 +141,7 @@ export class MatCarouselComponent
   constructor(
     private animationBuilder: AnimationBuilder,
     private renderer: Renderer2,
+    private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId
   ) { }
 
@@ -185,6 +187,8 @@ export class MatCarouselComponent
         filter(value => value && value < this.slidesList.length)
       )
       .subscribe(value => this.resetSlides(value))
+
+    this.cdr.detectChanges()
   }
 
   public ngOnDestroy(): void {
@@ -240,12 +244,13 @@ export class MatCarouselComponent
   }
 
   @HostListener('window:resize', ['$event'])
-  public onResize(event: Event): void {
+  public onResize(): void {
     // Reset carousel when window is resized
     // in order to avoid major glitches.
     this.slideTo(0)
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public onPan(event: any, slideElem: HTMLElement): void {
     // https://github.com/angular/angular/issues/10541#issuecomment-346539242
     // if y velocity is greater, it's a panup/pandown, so ignore.
@@ -265,6 +270,7 @@ export class MatCarouselComponent
     )
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public onPanEnd(event: any, slideElem: HTMLElement): void {
     this.renderer.removeStyle(slideElem, 'cursor')
 
